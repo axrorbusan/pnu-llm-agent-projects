@@ -1,0 +1,67 @@
+{
+  "leak_detection": {
+    "keyword_rule": {
+      "tp": 49,
+      "fp": 40,
+      "fn": 11,
+      "precision": 0.551,
+      "recall": 0.817,
+      "f1": 0.658
+    },
+    "canary_rule": {
+      "tp": 60,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "n_negatives": 120,
+    "n_positives": 60
+  },
+  "anomaly_detection": {
+    "isolation_forest": {
+      "train_normal": 117,
+      "test_normal": 51,
+      "test_abnormal": 40,
+      "tp": 0,
+      "fp": 0,
+      "fn": 40,
+      "tn": 51,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "contamination_sweep": {
+        "0.03": {
+          "recall": 0.0,
+          "false_pos_on_normal": 0,
+          "test_normal": 51
+        },
+        "0.1": {
+          "recall": 0.0,
+          "false_pos_on_normal": 0,
+          "test_normal": 51
+        },
+        "0.2": {
+          "recall": 0.0,
+          "false_pos_on_normal": 9,
+          "test_normal": 51
+        },
+        "0.3": {
+          "recall": 0.0,
+          "false_pos_on_normal": 19,
+          "test_normal": 51
+        }
+      }
+    },
+    "rule_detector": {
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "tn": 51,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  }
+}
